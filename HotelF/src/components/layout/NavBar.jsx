@@ -13,10 +13,10 @@ const NavBar = () => {
 	const userRole = localStorage.getItem("userRole")
 
 	return (
-		<nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow mt-5 sticky-top">
+		<nav className="navbar  bg-body-tertiary px-5 shadow mt-0  pb-2 pt-1 sticky-top">
 			<div className="container-fluid">
 				<Link to={"/"} className="navbar-brand">
-					<span className="hotel-color">Hotel</span>
+					<span className="c">BestHotel</span>
 				</Link>
 
 				<button
@@ -40,7 +40,7 @@ const NavBar = () => {
 
 							<li className="nav-item">
 								<NavLink className="nav-link" aria-current="page" to={"/admin"}>
-									Admin
+									Admine
 								</NavLink>
 							</li>
 						
@@ -49,7 +49,7 @@ const NavBar = () => {
 					<ul className="d-flex navbar-nav">
 						<li className="nav-item">
 							<NavLink className="nav-link" to={"/find-booking"}>
-								Find my booking
+							Trouver ma réservation
 							</NavLink>
 						</li>
 

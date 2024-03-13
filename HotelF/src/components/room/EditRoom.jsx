@@ -60,9 +60,10 @@ const EditRoom = () => {
 	}
 
 	return (
-		<div className="container mt-5 mb-5">
+		<section>
+		<div>
 			
-			<div className="row justify-content-center">
+			<div className="row d-flex justify-content-center align-items-center vh-100">
 				<div className="col-md-8 col-lg-6">
 					
 					<form className=" main" onSubmit={handleSubmit}>
@@ -142,6 +143,7 @@ const EditRoom = () => {
 				</div>
 			</div>
 		</div>
+		</section>
 	)
 }
 export default EditRoom

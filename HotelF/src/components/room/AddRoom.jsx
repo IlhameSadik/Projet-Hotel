@@ -57,7 +57,7 @@ const AddRoom = () => {
 	return (
 		<>
 			<section  >
-				<div className="row justify-content-center">
+				<div className="row d-flex justify-content-center align-items-center vh-100">
 					<div className="col-md-8 col-lg-6">
 						
 						{successMessage && (
@@ -69,9 +69,7 @@ const AddRoom = () => {
 						<form className=" main" onSubmit={handleSubmit}>
 						<div >
 						<div  className="row mt-2 mb-5">
-						<h1 style={{ color: "#7880f5",fontSize: "3rem",
-  fontWeight:" 700",
-  fontFamily: "'Lato', sans-serif;"}}>Ajouter une nouvelle chambre</h1>
+						<h1 className="hdes">Ajouter une nouvelle chambre</h1>
 						</div>
 								
 								{imagePreview && (

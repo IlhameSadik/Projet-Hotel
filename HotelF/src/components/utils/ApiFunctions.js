@@ -87,9 +87,9 @@ export async function bookRoom(roomId, booking) {
 /* This function gets alll bokings from the database */
 export async function getAllBookings() {
 	try {
-		const result = await api.get("/bookings/all-bookings", {
+		const result = await api.get("/bookings/all-bookings"/*, {
 			headers: getHeader()
-		})
+		}*/)
 		return result.data
 	} catch (error) {
 		throw new Error(`Error fetching bookings : ${error.message}`)
@@ -202,7 +202,7 @@ export async function getBookingsByUserId(userId, token) {
 		})
 		return response.data
 	} catch (error) {
-		console.error("Error fetching bookings:", error.message)
-		throw new Error("Failed to fetch bookings")
+		console.error("Erreur lors de la récupération des réservations:", error.message)
+		throw new Error("Échec de la récupération des réservations")
 	}
 }

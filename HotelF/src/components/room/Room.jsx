@@ -27,10 +27,13 @@ const Room = () => {
 			})
 	}, [])
 	if (isLoading) {
-		return <div>Loading rooms.....</div>
+		return <div>
+		<div class="spinner-border text-info" role="status">
+		   <span class="sr-only"></span>
+	</div></div>
 	}
 	if (error) {
-		return <div className=" text-danger">Error : {error}</div>
+		return <div className=" text-danger">Erreur : {error}</div>
 	}
 
 	const handlePageChange = (pageNumber) => {

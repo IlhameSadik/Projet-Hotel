@@ -14,12 +14,12 @@ const Home = () => {
 		<section>
 			{message && <p className="text-warning px-5">{message}</p>}
 			{currentUser && (
-				<h6 className="text-success text-center"> You are logged-In as {currentUser}</h6>
+				<h6 className="text-success text-center"> Vous êtes connecté(e) {currentUser}</h6>
 			)}
 			<MainHeader />
 			<div className="container">
 				<RoomSearch />
-				<RoomCarousel />
+				
 				<Parallax />
 				<RoomCarousel />
 				<HotelService />

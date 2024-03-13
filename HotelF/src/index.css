@@ -83,10 +83,14 @@ body {
   cursor: pointer; /* Curseur pointer */
   }
   .c{
-    color: #7880f5(169, 77, 123);
+    color: #7880f5;
+    font-family: "Sansita Swashed";
+    font-size:30px;
+
+   
   }
   .hotel-color{
-    color: #7880f5(169, 77, 123);
+    color: #7880f5;
   }
   .room-price{
     color:darkgoldenrod;
@@ -101,7 +105,7 @@ body {
 
 
 .parallax {
-  background-image: url("./assets/images/parrall.jpg");
+  background-image: url("./assets/images/parall.avif");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -208,7 +212,7 @@ body {
 
 /* The header banner */
 .header-banner {
-  background-image:  url("./assets/images/services-1.jpg");
+  background-image:  url("./assets/images/Accueil.jpg");
    background-size: cover;
   background-position: center;
    position: relative;
@@ -266,12 +270,20 @@ body {
 .main {
   background-color: #FFFFFF;
   width: 700px;
- 
-  margin:0%;
-  padding:5em;
+  margin: 20 auto;
+  margin-top:50px; /* Ajoutez cette ligne pour centrer l'élément horizontalement */
+  padding: 5em;
   border-radius: 1.5em;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  /* Assurez-vous que la barre de navigation est au-dessus de tout autre contenu */
+}
+
 .un {
   width: 76%;
   color:gray;
@@ -284,7 +296,6 @@ body {
   box-sizing: border-box;
   border: 2px solid rgba(0, 0, 0, 0.02);
   margin-bottom: 50px;
-  margin-left: 46px;
   text-align: center;
   margin-bottom: 27px;
 }
@@ -318,3 +329,24 @@ body {
   font-size: 2rem;
   font-weight:700;
   font-family: 'Lato', sans-serif;}
+  .card-body{
+    border-radius: 1px;
+  }
+  .booking-form-container {
+    width: 100%;
+    text-align: left;
+    padding:0px;
+  }
+  .in {
+    border: none;
+    background: #f3f0f0;
+    border-radius: .25rem;
+    padding: 1px;
+    
+    &[type="submit"] {
+      background: rgb(126, 205, 236);
+      color: rgb(157, 237, 252);
+      box-shadow: 0 .75rem .5rem -.5rem hsl(210, 6%, 93%);
+    }
+  }
+  

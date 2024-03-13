@@ -21,12 +21,15 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/bookings")
+
 public class BookingController {
     private final IBookingService bookingService;
     private final IRoomService roomService;
 
     @GetMapping("/all-bookings")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @CrossOrigin(origins = "http://localhost:5173/")
+
+    /*@PreAuthorize("hasRole('ROLE_ADMIN')*/
     public ResponseEntity<List<BookingResponse>> getAllBookings(){
         List<BookedRoom> bookings = bookingService.getAllBookings();
         List<BookingResponse> bookingResponses = new ArrayList<>();
@@ -38,6 +41,8 @@ public class BookingController {
     }
 
     @PostMapping("/room/{roomId}/booking")
+    @CrossOrigin(origins = "http://localhost:5173/")
+
     public ResponseEntity<?> saveBooking(@PathVariable Long roomId,
                                          @RequestBody BookedRoom bookingRequest){
         try{
@@ -51,6 +56,8 @@ public class BookingController {
     }
 
     @GetMapping("/confirmation/{confirmationCode}")
+    @CrossOrigin(origins = "http://localhost:5173/")
+
     public ResponseEntity<?> getBookingByConfirmationCode(@PathVariable String confirmationCode){
         try{
             BookedRoom booking = bookingService.findByBookingConfirmationCode(confirmationCode);
@@ -62,6 +69,8 @@ public class BookingController {
     }
 
     @GetMapping("/user/{email}/bookings")
+    @CrossOrigin(origins = "http://localhost:5173/")
+
     public ResponseEntity<List<BookingResponse>> getBookingsByUserEmail(@PathVariable String email) {
         List<BookedRoom> bookings = bookingService.getBookingsByUserEmail(email);
         List<BookingResponse> bookingResponses = new ArrayList<>();
@@ -73,6 +82,8 @@ public class BookingController {
     }
 
     @DeleteMapping("/booking/{bookingId}/delete")
+    @CrossOrigin(origins = "http://localhost:5173/")
+
     public void cancelBooking(@PathVariable Long bookingId){
         bookingService.cancelBooking(bookingId);
     }

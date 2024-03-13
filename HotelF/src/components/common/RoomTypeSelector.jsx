@@ -30,7 +30,7 @@ const RoomTypeSelector = ({ handleRoomInputChange, newRoom }) => {
 				<div>
 					<select
 						required
-						className="un"
+						className="in"
 						name="roomType"
 						onChange={(e) => {
 							if (e.target.value === "Ajouter Nouveau") {
@@ -40,7 +40,7 @@ const RoomTypeSelector = ({ handleRoomInputChange, newRoom }) => {
 							}
 						}}
 						value={newRoom.roomType}>
-						<option value="" >Sélectionnez un type de chambre</option>
+						<option value="" >choix</option>
 						<option value={"Ajouter Nouveau"}>Ajouter Nouveau</option>
 						{roomTypes.map((type, index) => (
 							<option key={index} value={type}>
@@ -53,7 +53,7 @@ const RoomTypeSelector = ({ handleRoomInputChange, newRoom }) => {
 							<div className="input-group">
 								<input
 									type="text"
-									className="un"
+									className="in"
 									placeholder="Entrer un nouveau type de chambre"
 									value={newRoomType}
 									onChange={handleNewRoomTypeInputChange}

@@ -82,7 +82,10 @@ const ExistingRooms = () => {
 			</div>
 
 			{isLoading ? (
-				<p>Chargement......</p>
+				<div>
+				<div class="spinner-border text-info" role="status">
+				   <span class="sr-only"></span>
+			</div></div>
 			) : (
 				<>
 					<section className="mt-5 mb-5 container">

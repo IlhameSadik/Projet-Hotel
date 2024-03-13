@@ -47,15 +47,15 @@ Voir les chambres			</Link>
 													src={`data:image/png;base64, ${room.photo}`}
 													alt="Room Photo"
 													className="w-100"
-													style={{ height: "200px" }}
+													style={{ height: "100px" }}
 												/>
 											</Link>
 											<Card.Body>
 												<Card.Title className="hotel-color">{room.roomType}</Card.Title>
-												<Card.Title className="room-price">${room.roomPrice}/night</Card.Title>
+												<Card.Title className="room-price">{room.roomPrice} DH/nuit</Card.Title>
 												<div className="flex-shrink-0">
 													<Link to={`/book-room/${room.id}`} className="btn btn-hotel btn-sm">
-														Book Now
+													Réserver maintenant
 													</Link>
 												</div>
 											</Card.Body>
